@@ -1,0 +1,34 @@
+<mat-card class="calculator">
+    <mat-form-field>
+      <input matInput [(ngModel)]="display" (keydown)="onKeyDown($event)">
+    </mat-form-field>
+    <div class="button-row">
+      <button mat-button (click)="appendToDisplay('7')">7</button>
+      <button mat-button (click)="appendToDisplay('8')">8</button>
+      <button mat-button (click)="appendToDisplay('9')">9</button>
+      <button mat-button (click)="appendToDisplay('+')">+</button>
+    </div>
+    <div class="button-row">
+      <button mat-button (click)="appendToDisplay('4')">4</button>
+      <button mat-button (click)="appendToDisplay('5')">5</button>
+      <button mat-button (click)="appendToDisplay('6')">6</button>
+      <button mat-button (click)="appendToDisplay('-')">-</button>
+    </div>
+    <div class="button-row">
+      <button mat-button (click)="appendToDisplay('1')">1</button>
+      <button mat-button (click)="appendToDisplay('2')">2</button>
+      <button mat-button (click)="appendToDisplay('3')">3</button>
+      <button mat-button (click)="appendToDisplay('*')">*</button>
+    </div>
+    <div class="button-row">
+      <button mat-button (click)="appendToDisplay('0')">0</button>
+      <button mat-button (click)="appendToDisplay('.')">.</button>
+      <button mat-button (click)="appendToDisplay('%')">%</button>
+      <button mat-button (click)="appendToDisplay('/')">/</button>
+    </div>
+    <div class="button-row">
+      <button mat-button (click)="clearDisplay()">C</button>
+      <button mat-button (click)="calculate()">=</button>
+    </div>
+</mat-card>
+  
